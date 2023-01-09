@@ -2,10 +2,17 @@ package com.example.dapurnusantara_v1.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation
 import com.example.dapurnusantara_v1.R
+import com.example.dapurnusantara_v1.databinding.ActivityMainBinding
+import com.example.dapurnusantara_v1.fragment.*
+import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Bottom Navigation
         setFragment(HomeFragment.newInstance())
         navigation.add(MeowBottomNavigation.Model(1, R.drawable.ic_home))
         navigation.add(MeowBottomNavigation.Model(2, R.drawable.ic_keranjang))
@@ -30,12 +38,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
         navigation.show(1)
+
+
     }
+
+
     fun setFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction()
             .replace(R.id.framelayout,fragment)
             .commit()
     }
-
 
 }
