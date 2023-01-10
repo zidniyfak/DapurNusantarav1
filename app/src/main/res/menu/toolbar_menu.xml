@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/tbSettings"
     android:title="Settings"
-    android:icon="@drawable/ic_bar2"
+    android:icon="@drawable/ic_minus"
     app:showAsAction="ifRoom"/>
+    <item android:id="@+id/tbse"
+    android:title="Settings"
+    android:icon="@drawable/ic_plus"
+    app:showAsAction="always"/>
 </menu>

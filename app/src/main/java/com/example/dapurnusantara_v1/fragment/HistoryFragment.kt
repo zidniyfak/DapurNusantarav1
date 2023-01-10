@@ -7,18 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.dapurnusantara_v1.R
 
-class RiwayatFragment : Fragment() {
+class HistoryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_riwayat, container, false)
+        return inflater.inflate(R.layout.fragment_history, container, false)
     }
 
     companion object {
-        fun newInstance(): RiwayatFragment {
-            return RiwayatFragment()
+        fun newInstance(): HistoryFragment {
+            return HistoryFragment()
         }
     }
 }
