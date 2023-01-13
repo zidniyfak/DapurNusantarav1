@@ -4,13 +4,13 @@
     android:id="@+id/toolbarApp"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="@drawable/bg_toolbar"
-    app:menu="@menu/toolbar_menu">
+    android:background="@drawable/bg_toolbar">
     <TextView
         android:id="@+id/tvAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
         android:text="Dapur Nusantara"
+        android:textAlignment="center"
         android:textSize="20dp" />
 </androidx.appcompat.widget.Toolbar>

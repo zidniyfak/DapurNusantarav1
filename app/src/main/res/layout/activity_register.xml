@@ -81,19 +81,22 @@
                 android:id="@+id/tiRegRePassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:endIconMode="password_toggle"
                 android:layout_marginTop="10dp"
                 android:hint="Re-Password"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:inputType="textPassword"
+
                     android:layout_height="wrap_content"
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/btnMovelogin2"
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
@@ -124,7 +127,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/btnMoveLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="2dp"

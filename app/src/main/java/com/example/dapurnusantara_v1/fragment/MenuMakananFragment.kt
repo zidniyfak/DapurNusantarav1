@@ -29,7 +29,6 @@ class MenuMakananFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private var list = ArrayList<Food>()
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

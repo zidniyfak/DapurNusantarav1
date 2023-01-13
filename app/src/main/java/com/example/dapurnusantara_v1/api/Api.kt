@@ -5,14 +5,22 @@ import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface Api {
 
     @GET("makanan")
     fun getMakanan(
     ): Call<FoodResponse>
+
+    @GET("login")
+    fun checkUserLogin(
+        @Query("username")username:String,
+        @Query("userpassword")userpassword:String,
+    ): Call<LoginResponse>
 
 //    @GET("http://192.168.69.156/online_food_server/public/makanan/{cari}")
     @GET("http://192.168.69.129/online_food_server/public/makanan/{cari}")
@@ -28,11 +36,13 @@ interface Api {
 //    @GET("http://192.168.69.156/online_food_server/public/transaksi")
     @GET("http://192.168.69.129/online_food_server/public/transaksi")
     fun getHistory(
+        @Header("Authorization")token_auth:String?,
     ): Call<HistoryResponse>
 
 //    @GET("http://192.168.69.156/online_food_server/public/cart")
     @GET("http://192.168.69.129/online_food_server/public/cart")
     fun getCart(
+        @Header("Authorization") token_auth:String?
     ): Call<CartResponse>
 
     @FormUrlEncoded

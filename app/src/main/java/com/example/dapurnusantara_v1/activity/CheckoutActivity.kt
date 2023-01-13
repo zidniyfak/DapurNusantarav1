@@ -14,8 +14,10 @@ import com.example.dapurnusantara_v1.R
 import com.example.dapurnusantara_v1.api.RClient
 import com.example.dapurnusantara_v1.databinding.ActivityCheckoutBinding
 import com.example.dapurnusantara_v1.model.CheckoutResponse
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_checkout.*
 import kotlinx.android.synthetic.main.activity_food_detail.*
+import kotlinx.android.synthetic.main.cart_item.*
 import kotlinx.android.synthetic.main.toolbar.*
 import org.json.JSONObject
 import retrofit2.Call
@@ -24,7 +26,7 @@ import retrofit2.Response
 
 class CheckoutActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCheckoutBinding
-    private var value = 0
+    private var value = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +34,11 @@ class CheckoutActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val foodName = intent.getStringExtra("FoodName")
-        tvCheckoutItemTitle.text = foodName
+
+        binding.tvCheckoutItemTitle.text = "Rendang Sapi"
+        binding.tvCheckoutItemPrice.text = "12000"
+
+        Picasso.get().load("https://images.tokopedia.net/img/KRMmCm/2022/8/9/51584c5e-2713-4895-88d5-30b677255ffd.jpg").fit().centerCrop().into(ivCartItems)
 
         btnPlus.setOnClickListener{
             value++

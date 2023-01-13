@@ -13,8 +13,8 @@ class DrinkAdapter(private val list: ArrayList<Drink>): RecyclerView.Adapter<Dri
     inner class UserViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bind(drink: Drink){
             with(itemView){
-                val text = "${drink.nama_minuman}"
-                tvDrinkName.text = text
+                tvDrinkName.text = "${drink.nama_minuman}"
+                tvPriceDrink.text = "${drink.harga}"
             }
         }
     }

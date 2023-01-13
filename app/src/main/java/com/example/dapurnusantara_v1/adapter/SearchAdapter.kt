@@ -19,7 +19,7 @@ class SearchAdapter(private val listSearch:ArrayList<Food>):RecyclerView.Adapter
         val cardView: CardView = itemView.findViewById(R.id.cvSearchItem)
         fun bind(food: Food){
             with(binding){
-                tvSearchItem.text = food.nama_makanan
+                tvSearchItem.text = "${food.name}"
             }
         }
     }
@@ -33,7 +33,7 @@ class SearchAdapter(private val listSearch:ArrayList<Food>):RecyclerView.Adapter
         val item = listSearch[position]
         holder.cardView.setOnClickListener{
             val intent = Intent(holder.cardView.context, FoodDetailActivity::class.java)
-            intent.putExtra("FoodName", item.nama_makanan)
+            intent.putExtra("FoodName", item.name)
             holder.cardView.context.startActivity(intent)
         }
     }

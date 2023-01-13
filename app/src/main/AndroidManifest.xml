@@ -43,13 +43,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activity.MapsActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".activity.SearchActivity"
             android:exported="false">
             <meta-data
@@ -98,6 +91,13 @@
         </activity>
         <activity
             android:name=".activity.LoginActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity.SettingActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
